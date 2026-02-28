@@ -1,4 +1,7 @@
 FROM almalinux:9
-WORKDIR /tmp/workdir-practice
-RUN echo "This is the workdir practice" > /tmp/workdir-practice/workdir.txt
-CMD ["sleep", "infinity"]
+RUN mkdir /tmp/workdir-demo
+#RUN cd /tmp/workdir-demo
+WORKDIR /tmp/workdir-demo
+RUN pwd
+RUN echo "Hello I am in work dir" > hello.txt
+CMD ["sleep","1000"]
