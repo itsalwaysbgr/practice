@@ -1,7 +1,8 @@
 ARG version
 FROM almalinux:${version:-9}
-ENV time=protect \
-    procastinate=never
-ARG task=take-action
-RUN echo " one cant ${procastinate} when the time is ${time} and the task is ${task}"
-CMD ["sleep", "300"]
+ENV course="devops" \
+    duration="120hrs"
+ARG trainer="sivakumar"
+ENV trainer=$trainer
+RUN echo "Hi, Course is: ${course}, duration is: ${duration}, trainer is: ${trainer}, version: ${version}"
+CMD ["sleep", "1000"]
