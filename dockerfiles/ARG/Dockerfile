@@ -3,5 +3,6 @@ FROM almalinux:${version:-9}
 ENV time=protect \
     procastinate=never
 ARG task=take-action
+ENV task=${task}
 RUN echo " one cant ${procastinate} when the time is ${time} and the task is ${task}"
 CMD ["sleep", "300"]
