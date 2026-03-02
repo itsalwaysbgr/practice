@@ -1,5 +1,5 @@
 ARG version
-FROM almalinux:${version}-9
+FROM almalinux:${version:-9}
 ENV time=protect \
     procastinate=never
 ARG task=take-action
